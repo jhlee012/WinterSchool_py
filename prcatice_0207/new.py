@@ -17,30 +17,30 @@
 
 #----------------------------------
 
-def mi(temp, type):
-    if (type == 'sec' or type == 'second'):
+def mi(temp, kindT):
+    if kindT == 'sec' or kindT == 'second':
         sec = temp
         mins = temp/60
         hour = temp/3600
-    elif (type == 'min' or type == 'minute'):
+    elif kindT == 'min' or kindT == 'minute':
         sec = temp * 60
         mins = temp
         hour = temp / 60
 
-    elif (type == 'hour' or type == 'hours'):
+    elif kindT == 'hour' or kindT == 'hours':
         sec = temp / 3600
         mins = temp / 60
         hour = temp
     else:
         print('TypeError! - Undefined Function Type')
-        return;
+        return
     
     print('초 : ', sec)
     print('분 : ', mins)
     print('시 : ', hour)
 
 t = int(input('Time? : '))
-type = input('Type? : ')
-mi(t, type)
+kind = input('Type? : ')
+mi(t, kind)
 
         
