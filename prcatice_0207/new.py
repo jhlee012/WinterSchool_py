@@ -15,13 +15,13 @@
 # else:
 #     print('어케했노')
 
-#----------------------------------
+# ----------------------------------
 
 def mi(temp, kindT):
     if kindT == 'sec' or kindT == 'second':
         sec = temp
-        mins = temp/60
-        hour = temp/3600
+        mins = temp / 60
+        hour = temp / 3600
     elif kindT == 'min' or kindT == 'minute':
         sec = temp * 60
         mins = temp
@@ -34,13 +34,12 @@ def mi(temp, kindT):
     else:
         print('TypeError! - Undefined Function Type')
         return
-    
+
     print('초 : ', sec)
     print('분 : ', mins)
     print('시 : ', hour)
 
+
 t = int(input('Time? : '))
 kind = input('Type? : ')
 mi(t, kind)
-
-        
