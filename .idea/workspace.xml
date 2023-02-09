@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a02ee5d9-4b05-461f-9d05-9263df3d8aa1" name="Changes" comment="Just For py">
-      <change afterPath="$PROJECT_DIR$/MidTerm/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/Collatz_Conjecture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/any.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/if1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/imported.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/keyward.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/noaa.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/p1102.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/phone.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/pv.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/randonTurt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/repeattest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/rl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/split.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/tree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice_0208/whiletest.py" afterDir="false" />
+    <list default="true" id="a02ee5d9-4b05-461f-9d05-9263df3d8aa1" name="Changes" comment="02.08 python">
+      <change afterPath="$PROJECT_DIR$/MidTerm/module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MidTerm/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidTerm/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MidTerm/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/user/Desktop/jhlee012/WinterSchool_py",
-    "settings.editor.selected.configurable": "editing.templates"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Python"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -88,12 +75,20 @@
       <option name="project" value="LOCAL" />
       <updated>1675752965204</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="02.08 python">
+      <created>1675839634562</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675839634562</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nah" />
     <MESSAGE value="Just For py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Just For py" />
+    <MESSAGE value="02.08 python" />
+    <option name="LAST_COMMIT_MESSAGE" value="02.08 python" />
   </component>
 </project>
