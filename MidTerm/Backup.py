@@ -77,51 +77,45 @@ except FileNotFoundError:
     defont = tkfont.Font(family='맑은 고딕', size=20, weight='normal' )
     defontBing = tkfont.Font(family='고딕', size=25, weight='bold')
 
-    root.geometry("1200x800")
+    root.geometry("1000x800")
     root.resizable = True
     root.title('고등학교 내신 등급 산출기')
     
 
-    root.grid_columnconfigure(0, weight=1)
-    root.grid_columnconfigure(3, weight=1)
-
-    TitleLab = Label(root, text='               고등학교 내신성적계산기', font=defontBing, padx=20, pady=10)
-    TitleLab.grid(row=0, column=1, columnspan=2)
 
     namelab = Label(root, text = '과목명', font=defont, padx=20, pady=10)
-    namelab.grid(row=1, column=1)
+    namelab.grid(row=0, column=0)
 
     nameEnt = Entry(root, font=defont)
-    nameEnt.grid(row=1, column=2)
+    nameEnt.grid(row=0, column=1)
 
 
     placelab = Label(root, text='석차', font=defont, padx=20, pady=10)
-    placelab.grid(row=2, column=1)
-
+    placelab.grid(row=1, column=0)
 
     placeEnt = Entry(root, font=defont)
-    placeEnt.grid(row=2, column=2)
+    placeEnt.grid(row=1, column=1)
 
     samelab = Label(root, text='동석차', font=defont, padx=20, pady=10)
-    samelab.grid(row=3, column=1)
+    samelab.grid(row=2, column=0)
 
     sameEnt = Entry(root, font=defont)
-    sameEnt.grid(row=3, column=2)
+    sameEnt.grid(row=2, column=1)
 
     alllab = Label(root, text='수강자수', font=defont, padx=20, pady=10)
-    alllab.grid(row=4, column=1)
+    alllab.grid(row=3, column=0)
 
     allEnt = Entry(root, font=defont)
-    allEnt.grid(row=4, column=2)
+    allEnt.grid(row=3, column=1)
 
     ctimelab = Label(root, text='단위 (시수)', font=defont, padx=20, pady=10)
-    ctimelab.grid(row=5, column=1)
+    ctimelab.grid(row=4, column=0)
 
     ctimeEnt = Entry(root, font=defont)
-    ctimeEnt.grid(row=5, column=2)
+    ctimeEnt.grid(row=4, column=1)
 
     currentlab = Label(root, text='추가된 과목이 없습니다.', font=defont)
-    currentlab.grid(row=7, column=1)
+    currentlab.grid(row=6, column=0)
 
 
     namearr = [] #과목명
@@ -157,16 +151,11 @@ except FileNotFoundError:
             int(sameEnt.get())
             int(allEnt.get())
             int(ctimeEnt.get())
+            return True
         except ValueError:
             msg.showwarning('과목 없음', '올바른 형식이 아닙니다. \n다시 입력해주세요.')
             ClearAll()
             return False
-        if (int (placeEnt.get()) + int(sameEnt.get())) -1 > int(allEnt.get()):
-            msg.showwarning('과목 없음', '올바른 형식이 아닙니다. \n다시 입력해주세요.\n(올바르지 않은 형식 : 수강자수가 석차보다 많아야 합니다.)')
-            ClearAll()
-            return False
-        return True
-
     
 
     def addRow():
@@ -187,9 +176,9 @@ except FileNotFoundError:
                 global currentlab
                 currentlab.destroy()
                 currentlab = Label(root, text=('추가된 과목 : ' + ', '.join(namearr)), font=defont)
-                currentlab.grid(row=7, column=1)
+                currentlab.grid(row=6)
         
-    global endl
+
     def getRes():
         ClearAll()
         global currentlab
@@ -227,8 +216,8 @@ except FileNotFoundError:
             resultarr.append('과목 : ' + namearr[i] + ' (' + str(ctime[i]) +')' +' | 백분위 : ' + str(100-round(perc)) +' | 등급 : ' + str(grade))
 
         pres = '\n'.join(resultarr)
-        currentlab = Label(root, text=pres, font=defont, justify=LEFT)
-        currentlab.grid(row=7, column=1)
+        currentlab = Label(root, text=pres, font=defont)
+        currentlab.grid(row=6, column=0,  sticky='w')
 
 
         def sumarr(arr):
@@ -239,7 +228,7 @@ except FileNotFoundError:
                 timesum += j[1]
             res = res / timesum
             return round(res, 2)
-
+        global endl
         bc = 'green'
         if sumarr(resgradearr) < 2:
             bc = 'cyan'
@@ -247,9 +236,9 @@ except FileNotFoundError:
             bc='yellow'
         elif sumarr(resgradearr) >= 4:
             bc = 'red'
-        global endl
+
         endl = Label(root, text=('평균등급 : ' + str(sumarr(resgradearr)) + ' 등급'),  fg='black', bg=bc,font=defontBing, borderwidth='3', relief='solid')
-        endl.grid(row=7, column=2, rowspan=2, padx=60)
+        endl.grid(row=6, column=1, rowspan=2, padx=60)
 
     def resetAll():
         ClearAll()
@@ -261,21 +250,20 @@ except FileNotFoundError:
         allarr.clear()
         ctime.clear()
         currentlab.destroy()
-        if __name__ =='__main__':
-            if 'endl' in globals():
-                endl.destroy()
+        if endl:
+            endl.destroy()
 
                 
 
 
     resetBtn = Button(root, text='초기화', font=defont, bg='darkgray', fg='black', command=resetAll)
-    resetBtn.grid(row=6, column=1, padx=10, pady=10)
+    resetBtn.grid(row=5, column=0, padx=10, pady=10)
 
     addBtn = Button(root, text='과목 추가', font=defont, bg='gray', command=addRow)
-    addBtn.grid(row=6,column=2)
+    addBtn.grid(row=5,column=1)
 
     finBtn = Button(root, text='완료' ,font=defont, bg='cyan', command=getRes)
-    finBtn.grid(row=6, column=3, columnspan=2)
+    finBtn.grid(row=5, column=3)
 
 
 
