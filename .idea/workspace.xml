@@ -96,15 +96,4 @@
     <MESSAGE value="02.09 python - Main project" />
     <option name="LAST_COMMIT_MESSAGE" value="02.09 python - Main project" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MidTerm/main.py</url>
-          <line>94</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
 </project>

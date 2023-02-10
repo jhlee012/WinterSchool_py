@@ -149,6 +149,10 @@ except FileNotFoundError:
         sameEnt.delete(0, 'end')
         ctimeEnt.delete(0, 'end')
         sameEnt.insert(0, '1')
+        if __name__ == '__main__':
+            if 'endl' in globals():
+                global endl
+                endl.destroy()
 
 
     def typecheck():
@@ -266,8 +270,6 @@ except FileNotFoundError:
                 endl.destroy()
 
                 
-
-
     resetBtn = Button(root, text='초기화', font=defont, bg='darkgray', fg='black', command=resetAll)
     resetBtn.grid(row=6, column=1, padx=10, pady=10)
 
@@ -281,6 +283,8 @@ except FileNotFoundError:
 
 
     root.mainloop()
+
+
 
 
 
