@@ -1,9 +1,11 @@
 #github@jhlee012
 #If grade.txt exits => run based on txt | Else : Run UI
+from typing import List
+
 ccounter = -1
 try:
     f = open('grade.txt', 'r', encoding='UTF-8')
-    count = -3;
+    count = -3
 
     namearr = [] #과목명
     posarr = [] #석차
@@ -30,11 +32,11 @@ try:
     for i in range(count+1):
 
         perc = ((int(posarr[i]) + int(samearr[i]) - 1) / int(allarr[i])) * 100
-        grade = 0;
+        grade = 0
         if perc <= 4:
-            grade = 1;
+            grade = 1
         elif perc <= 11:
-            grade = 2;
+            grade = 2
         elif perc <= 23:
             grade =3
         elif perc <= 40:
@@ -58,8 +60,8 @@ try:
 
 
     def sumarr(arr):
-        res = 0;
-        timesum = 0;
+        res = 0
+        timesum = 0
         for j in arr:
             res += j[0]*j[1]
             timesum += j[1]
@@ -175,7 +177,7 @@ except FileNotFoundError:
 
     def addRow():
         if typecheck():
-            global ccounter;
+            global ccounter
             ccounter += 1
             namearr.append(nameEnt.get())
             posarr.append(int(placeEnt.get()))
@@ -201,17 +203,17 @@ except FileNotFoundError:
         global namearr, posarr, samearr, allarr, ctime
         if ccounter == -1:
             msg.showwarning('과목 없음', '과목별 성적이 입력되지 않았습니다.\n성적 입력 후 다시 시도해주세요. ')
-            return;
-        resultarr= []
+            return
+        resultarr: list[str]= []
         resgradearr = []
         for i in range(ccounter+1):
 
             perc = ((int(posarr[i]) + int(samearr[i]) - 1) / int(allarr[i])) * 100
-            grade = 0;
+            grade = 0
             if perc <= 4:
-                grade = 1;
+                grade = 1
             elif perc <= 11:
-                grade = 2;
+                grade = 2
             elif perc <= 23:
                 grade =3
             elif perc <= 40:
@@ -236,8 +238,8 @@ except FileNotFoundError:
 
 
         def sumarr(arr):
-            res = 0;
-            timesum = 0;
+            res = 0
+            timesum = 0
             for j in arr:
                 res += j[0]*j[1]
                 timesum += j[1]
