@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a02ee5d9-4b05-461f-9d05-9263df3d8aa1" name="Changes" comment="02.08 python">
-      <change afterPath="$PROJECT_DIR$/MidTerm/module.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MidTerm/ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+    <list default="true" id="a02ee5d9-4b05-461f-9d05-9263df3d8aa1" name="Changes" comment="02.10 python - Main project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MidTerm/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MidTerm/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidTerm/module.py" beforeDir="false" afterPath="$PROJECT_DIR$/MidTerm/module.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +39,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/user/Desktop/jhlee012/WinterSchool_py",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Python"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -53,6 +57,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675749167553</updated>
+      <workItem from="1676248900541" duration="740000" />
+      <workItem from="1676250015312" duration="44000" />
     </task>
     <task id="LOCAL-00001" summary="nah">
       <created>1675749610916</created>
@@ -82,13 +88,24 @@
       <option name="project" value="LOCAL" />
       <updated>1675839634562</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="02.09 python - Main project">
+      <created>1675925933653</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675925933653</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nah" />
     <MESSAGE value="Just For py" />
     <MESSAGE value="02.08 python" />
-    <option name="LAST_COMMIT_MESSAGE" value="02.08 python" />
+    <MESSAGE value="02.09 python - Main project" />
+    <option name="LAST_COMMIT_MESSAGE" value="02.09 python - Main project" />
   </component>
 </project>
