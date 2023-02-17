@@ -10,7 +10,6 @@ import xhat as hw
 # Main Class
 class Ctrl:
     def __init__(self):
-        hw.motor_clean()
         self.speed1 = 0
         self.speed2 = 0
         self.moving = False
@@ -37,41 +36,35 @@ class Ctrl:
             else:
                 return True
 
-    def setspeed(self, motor1, motor2):  # Just set Motor Speed. Not Add, Just SET as individual
+    def setspeed(self, motor1: int, motor2: int):  # Just set Motor Speed. Not Add, Just SET as individual
         self.speed1 = motor1
         self.speed2 = motor2
-        hw.motor_clean()
         hw.motor_one_speed(motor1)
+        print('Runned Motor 1')
         hw.motor_two_speed(motor2)
+        print('Runned Motor 2')
 
     def setdefspeed(self):
         # **WARN**
         # for inherited, Reset motor speed as self.speed1, .speed2
         # This method does not reset self.speed1 as .this
         # to do reset, use .setspeed() Method Instead.
-        hw.motor_clean()
         hw.motor_one_speed(self.speed1)
         hw.motor_two_speed(self.speed2)
 
     def front(self, speed):  # go front as same speed - Clearance Init.
-        self.clear()
-        self.speed1, self.speed2 = speed
         self.state = 'front'
         self.setspeed(speed, speed)
 
-    def back(self, speed): # go front as same speed - Clearance Init.
-        self.clear()
-        self.speed1, self.speed2 = -speed
+    def back(self, speed):  # go front as same speed - Clearance Init.
         self.state = 'back'
         self.setspeed(-speed, -speed)
 
     def left(self, mainspeed, subspeed):  # turn left - use MotorOne as main motor - Clearance Init
-        self.clear()
         self.setspeed(mainspeed, subspeed)
         self.state = 'left'
 
     def right(self, mainspeed, subspeed):  # turn right - use MotorTwo as main motor - Clearance Init
-        self.clear()
         self.setspeed(subspeed, mainspeed)
         self.state = 'right'
 
@@ -101,6 +94,7 @@ class Ctrl:
             print('::WARN:: \nCurrent State is not RIGHT')
 
 
-
-
-
+if __name__ == '__main__':
+    main = Ctrl()
+    print('-------------')
+    main.setspeed(100, 100)

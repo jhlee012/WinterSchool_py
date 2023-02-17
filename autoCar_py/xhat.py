@@ -197,8 +197,7 @@ def motor_one_speed(speed):
             MotorOne.forward(speed)
         else:
             MotorOne.stop(0)
-            # print("motor stopped\n")
-
+            print("motor stopped\n")
 
     except KeyboardInterrupt:
         print("CTRL-C: Terminating program.")

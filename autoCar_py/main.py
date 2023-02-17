@@ -4,7 +4,6 @@
 # Using 'tctrl' as Personal Contorl Simplification Lib. (Also Use 'xhat' as def)
 
 # Default Imports
-import xhat as hw
 import tctrl
 import cv2
 
@@ -32,6 +31,7 @@ while True:
     print(k)  # Print KeyInput
 
     if k == ord('q'):  # exit
+        main.clear()
         break  # => motor clean & destroy all windows
 
     elif k == ord('s'):  # start 토글 커맨드
@@ -66,29 +66,38 @@ while True:
 
     elif k == 82:
         if main.state == 'front':
-            main.addAll(30) # Front ADD
+            main.addAll(25)  # Front ADD
         else:
-            main.front(50) # Front INIT
-
-    elif k == 81:
-        if main.state == 'left':
-            main.leftadd(10, 50)  # LEFT ADD
-        else:
-            main.left(10, 80)  # LEFT INIT
+            main.front(50)  # Front INIT
 
     elif k == 83:
+        if main.state == 'left':
+            main.leftadd(5, 0)  # LEFT ADD
+        else:
+            main.left(5, 100)  # LEFT INIT
+
+    elif k == 81:
         if main.state == 'right':
-            main.rightadd(10, 50)  # RIGHT ADD
+            main.rightadd(5, 0)  # RIGHT ADD
         else:
-            main.right(10, 80)  # RIGHT INIT
+            main.right(5, 100)  # RIGHT INIT
 
-    elif k == 84:
+    elif k == 84 or k == 181:
         if main.state == 'back':
-            main.addAll(-30)  # BACK ADD
+            main.addAll(-25)  # BACK ADD
         else:
-            main.back(50)  # BACK INIT
+            main.back(50)  # BACK
+
+    elif k == 180:
+        if main.state == 'right':
+            main.rightadd(-5, 0)
+        else:
+            main.right(-5, -100)
+    elif k == 182:
+        if main.state == 'left':
+            main.leftadd(-5, 0)
+        else:
+            main.left(-5, -100)
 
 
-cv2.destroyAllwindows()
-
-hw.motor_clean()
+cv2.destroyAllWindows()
